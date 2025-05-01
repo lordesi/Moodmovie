@@ -191,6 +191,7 @@ p { color: var(--text-non-selected);}
     border: 1px solid var(--senary-color);
     border-radius: 20px;
     overflow: hidden;
+    padding: 10px 10px;
 
 }
 
@@ -198,10 +199,9 @@ p { color: var(--text-non-selected);}
 {
     width: 100%;
     height: 100%;
-    border-radius: 20px;
+    border-radius: 18px;
     transition: all 0.3s ease-in-out;
     object-fit: cover;
-    padding: 5% 5%;
 }
 
 
