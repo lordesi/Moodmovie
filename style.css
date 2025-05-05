@@ -34,6 +34,14 @@ p { color: var(--text-non-selected);}
 
 }
 
+
+/* Animations*/
+
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
 /*header*/
 
 
@@ -180,18 +188,21 @@ p { color: var(--text-non-selected);}
 
 /* Platforms*/
 
+.line {display:flex; flex-shrink: 0; padding: 0px 5%; box-sizing: border-box; overflow: hidden; margin: 10px 0px;}
 
+.col-100__platforms{width: 100%; display: flex; justify-content: space-between; align-items: center; animation: scroll 15s linear infinite; }
 .platform__container{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    width: 300px;
-    height: 150px;
+    width: 130px;
+    height: 50px;
     border: 1px solid var(--senary-color);
     border-radius: 20px;
     overflow: hidden;
     padding: 10px 10px;
+
 
 }
 
@@ -199,7 +210,7 @@ p { color: var(--text-non-selected);}
 {
     width: 100%;
     height: 100%;
-    border-radius: 18px;
+    border-radius: 10px;
     transition: all 0.3s ease-in-out;
     object-fit: cover;
 }
@@ -286,6 +297,122 @@ p { color: var(--text-non-selected);}
 }
 
 
+/* Main Login Page*/
+
+
+.main-login-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--quinary-color);
+
+
+}
+
+.wrapper{
+    width: 400px;
+    color: var(--quaternary-color);
+    border: 1px solid var(--senary-color);
+    border-radius: 20px;
+    padding: 20px 5%;
+
+}
+
+.wrapper h1{
+    text-align: center;
+    font-size: 36px;
+    color: var(--quaternary-color);
+    margin-bottom: 40px;
+}
+
+.input__box{
+
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+    
+}
+
+.input__box input{
+    width: 100%;
+    height: 100%;
+    border:none;
+    outline: none;
+    border: 1px solid var(--senary-color);
+    border-radius: 20px;
+    font-size: 16px;
+    padding: 0 50px 0 15px;
+    box-sizing: border-box;
+
+}
+
+.input__box input::placeholder{
+    color: var(--quinary-color)
+}
+
+.input__box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--quinary-color);
+    font-size: 20px;
+    pointer-events: none;
+}
+
+.remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:  20px 0;
+}
+
+.remember-forgot label input{
+    accent-color: var(--quaternary-color);
+    
+}
+
+.remember-forgot a{
+    text-decoration: none;
+    color: var(--quaternary-color);
+    font-size: 12px;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.wrapper .button{
+    border: none;
+    width: 100%;
+    background-color: var(--quaternary-color);
+    color: var(--quinary-color);
+    padding: 15px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.register-link{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-link a{
+    text-decoration: none;
+    color: var(--quaternary-color);
+    font-size: 12px;
+}
+
+.register-link a:hover{
+    text-decoration: underline;
+}
+
+
 /* Footer */
 
 .footer{
@@ -320,6 +447,7 @@ p { color: var(--text-non-selected);}
     padding: 40px 5% 20px 5%;
 
 }
+
 
 
 
