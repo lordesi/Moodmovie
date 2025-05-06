@@ -36,13 +36,15 @@
                 <form action="">
                     <h1>Login</h1>
                     <div class="input__box">
-                        <input type="text" placeholder="Username" required>
+                        <input type="text" id="email" placeholder="Username">
                         <i class='bx bxs-user'></i>
                     </div>
                     <div class="input__box">
-                        <input type="password" placeholder="Password" required>
+                        <input type="password" id="password" placeholder="Password">
                         <i class='bx bxs-lock-alt' ></i>
                     </div>
+                    
+                    <span id="error-message" class="error-message"></span>
 
                     <div class="remember-forgot">
 
@@ -127,5 +129,6 @@
                 
                 
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

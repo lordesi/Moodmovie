@@ -13,7 +13,6 @@ a{ font-size: 12px;}
 p { color: var(--text-non-selected);}
 
 
-
 .icon { color: var(--quaternary-color)}
 
 :root {
@@ -34,6 +33,15 @@ p { color: var(--text-non-selected);}
 
 }
 
+.error-message{
+    display: none;
+    background-color: var(--primary-color);
+    font-size: 12px;
+    margin-top: 5px;
+    color: var(--quaternary-color);
+    text-align: center;
+
+}
 
 /* Animations*/
 
@@ -345,6 +353,7 @@ p { color: var(--text-non-selected);}
     font-size: 16px;
     padding: 0 50px 0 15px;
     box-sizing: border-box;
+    overflow: hidden;
 
 }
 
@@ -360,6 +369,20 @@ p { color: var(--text-non-selected);}
     color: var(--quinary-color);
     font-size: 20px;
     pointer-events: none;
+}
+
+.input__box button{ 
+    position: absolute;
+    height: 100%;
+    width: 80px;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--quinary-color);
+    border: 1px solid var(--quaternary-color);
+    color: var(--quaternary-color);
+    font-size: 12px;
+    border-radius: 20px;
 }
 
 .remember-forgot{
@@ -419,7 +442,11 @@ p { color: var(--text-non-selected);}
     padding: 30px 5%;
 }
 
-
+.grid_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .footer ul{
     display: flex;
