@@ -33,15 +33,7 @@ p { color: var(--text-non-selected);}
 
 }
 
-.error-message{
-    display: none;
-    background-color: var(--primary-color);
-    font-size: 12px;
-    margin-top: 5px;
-    color: var(--quaternary-color);
-    text-align: center;
 
-}
 
 /* Animations*/
 
@@ -324,6 +316,23 @@ p { color: var(--text-non-selected);}
     border: 1px solid var(--senary-color);
     border-radius: 20px;
     padding: 20px 5%;
+
+
+}
+
+.error-message{
+
+    display: none;
+    margin-left: 25%;
+    width: 50%;
+    height: 50px;
+    background-color: var(--quaternary-color);
+    font-size: 15px;
+    color: var(--quinary-color);
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    border-radius: 20px;
 
 }
 
