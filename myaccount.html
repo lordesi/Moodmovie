@@ -21,9 +21,18 @@
             </ul>
         </nav>
         <div class="menu__buttons">
-            <a href="#" class="button button-search"><i class=" fa fa-search"></i></a>
-            <a href="#" class="button button-login">Login</a>
-            <a href="#" class="button button-signup">Sign Up</a>
+            
+
+            <div class="container-search">
+                <form action="" class="search" id="searchBar">
+                    <input type="text" id="search" placeholder="Search...">
+                    <div class="superbutton" id="superbutton">
+                        <button class="supersearch" id="supersearch" type="submit"><i class='fa fa-search'></i></button>
+                    </div>
+                </form>
+
+            <a href="myaccount.html" class="button button-login">Login</a>
+            <a href="myaccount.html" class="button button-signup">Sign Up</a>
         </div>
     </header>
 
@@ -33,7 +42,7 @@
 
             <div class="wrapper">
 
-                <form action="">
+                <form action="" id="myform1">
                     <h1>Login</h1>
                     <div class="input__box">
                         <input type="text" id="email" placeholder="Username">
@@ -131,8 +140,8 @@
     </footer>
     <script>
 
-        
-        const form = document.querySelector("form");
+        // JavaScript for form validation
+        const form = document.getElementById("myform1");
         const email =  document.getElementById("email");
         const password =  document.getElementById("password");
         const errorElement = document.getElementById("error-message");
@@ -144,7 +153,21 @@
             } else {
                 errorElement.style.display = "none";
             }
-        });
+        }); 
+
+        // Javascript for search animation 
+        const toggleSearch = (searchID, buttonID) => {
+            const searchButton = document.getElementById(buttonID);
+            const searchBar = document.getElementById(searchID);
+
+            searchButton.addEventListener("click", ()=>{
+                searchBar.classList.toggle("show-search");
+                
+            })
+        }
+        toggleSearch("searchBar", "superbutton");
+
+
     </script>
 </body>
 </html>
