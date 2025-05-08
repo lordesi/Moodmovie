@@ -12,7 +12,9 @@
 </head>
 <body>
     <header class="header">
-        <img src="logo.webp" alt="Logo" class="logo">
+        <a href="index.html">
+            <img src="logo.webp" alt="Logo" class="logo">
+        </a>
         <nav class="menu">
             <ul>
                 <li><a href="#">Home</a></li>
@@ -24,13 +26,13 @@
             
 
             <div class="container-search">
-                <form action="" class="search" id="searchBar">
+                <form action="" class="search" id="searchBar-account">
                     <input type="text" id="search" placeholder="Search...">
-                    <div class="superbutton" id="superbutton">
-                        <button class="supersearch" id="supersearch" type="submit"><i class='fa fa-search'></i></button>
+                    <div class="superbutton" id="superbutton-account">
+                        <button class="supersearch" id="supersearch-account" type="submit"><i class='fa fa-search'></i></button>
                     </div>
                 </form>
-
+            </div>
             <a href="myaccount.html" class="button button-login">Login</a>
             <a href="myaccount.html" class="button button-signup">Sign Up</a>
         </div>
@@ -139,7 +141,7 @@
                 
     </footer>
     <script>
-
+        
         // JavaScript for form validation
         const form = document.getElementById("myform1");
         const email =  document.getElementById("email");
@@ -155,17 +157,7 @@
             }
         }); 
 
-        // Javascript for search animation 
-        const toggleSearch = (searchID, buttonID) => {
-            const searchButton = document.getElementById(buttonID);
-            const searchBar = document.getElementById(searchID);
-
-            searchButton.addEventListener("click", ()=>{
-                searchBar.classList.toggle("show-search");
-                
-            })
-        }
-        toggleSearch("searchBar", "superbutton");
+        
 
 
     </script>

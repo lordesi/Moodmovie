@@ -12,7 +12,9 @@
 
 <body>
     <header class="header">
-                <img src="logo.webp" alt="Logo" class="logo">
+                <a href="index.html">
+                    <img src="logo.webp" alt="Logo" class="logo">
+                </a>
                 <nav class="menu">
                     <ul>
                         <li><a href="#">Home</a></li>
@@ -21,7 +23,14 @@
                     </ul>
                 </nav>
                 <div class="menu__buttons">
-                    <a href="" class="button button-search"><i class=" fa fa-search"></i></a>
+                    <div class="container-search">
+                        <form action="" class="search" id="searchBar">
+                            <input type="text" id="search" placeholder="Search...">
+                            <div class="superbutton" id="superbutton">
+                                <button class="supersearch" id="supersearch" type="submit"><i class='fa fa-search'></i></button>
+                            </div>
+                        </form>
+                    </div>
                     <a href="myaccount.html" class="button button-login">Login</a>
                     <a href="myaccount.html" class="button button-signup">Sign Up</a>
                 </div>
@@ -61,9 +70,6 @@
                         <img src="Platforms Logos\prime.png" alt="Netflix" class="platform__img"></img>
                     </div>
                     <div class="platform__container">
-                        <img src="Platforms Logos\prm.png" alt="Netflix" class="platform__img"></img>
-                    </div>
-                    <div class="platform__container">
                         <img src="Platforms Logos\ytb.webp" alt="Netflix" class="platform__img"></img>
                     </div>
                     
@@ -87,9 +93,6 @@
                     </div>
                     <div class="platform__container">
                         <img src="Platforms Logos\prime.png" alt="Netflix" class="platform__img"></img>
-                    </div>
-                    <div class="platform__container">
-                        <img src="Platforms Logos\prm.png" alt="Netflix" class="platform__img"></img>
                     </div>
                     <div class="platform__container">
                         <img src="Platforms Logos\ytb.webp" alt="Netflix" class="platform__img"></img>
@@ -177,6 +180,19 @@
             
             
     </footer>
+    <script>
+
+        const toggleSearch = (searchID, buttonID) => {
+            const searchButton = document.getElementById(buttonID);
+            const searchBar = document.getElementById(searchID);
+
+            searchButton.addEventListener("click", ()=>{
+                searchBar.classList.toggle("show-search");
+                        
+            })
+        }
+        toggleSearch("searchBar", "superbutton");
+    </script>
     
 </body>
 </html>

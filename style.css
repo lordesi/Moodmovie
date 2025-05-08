@@ -1,6 +1,6 @@
 /* Reset */
 
-body, html { font-family: "Montserrat", Arial, Helvetica, sans-serif; line-height: 1; font-size: 16px; box-sizing: border-box; margin: 0; padding: 0; }
+body, html { font-family: "Montserrat", Arial, Helvetica, sans-serif; line-height: 1; font-size: 16px; box-sizing: border-box; margin: 0; padding: 0; overflow-x: hidden;}
 
 body { background-color: var(--quinary-color);}
 
@@ -143,6 +143,7 @@ p { color: var(--text-non-selected);}
 .logo{
     width: auto;
     height: 35px;
+    cursor: pointer;
 }
 
 /* Main */
@@ -188,9 +189,9 @@ p { color: var(--text-non-selected);}
 
 /* Platforms*/
 
-.line {display:flex; flex-shrink: 0; padding: 0px 5%; box-sizing: border-box; overflow: hidden; margin: 10px 0px;}
+.line {width: 100%;display:flex; flex-shrink: 0; padding: 0px 20px 0 20px; box-sizing: border-box; overflow: hidden; margin: 10px 0px; margin-right: 5%}
 
-.col-100__platforms{width: 100%; display: flex; justify-content: space-between; align-items: center; animation: scroll 15s linear infinite; }
+.col-100__platforms{width: 100%; display:flex; justify-content: space-between; align-items: center; animation: scroll 15s linear infinite; gap: 5px;}
 .platform__container{
     display: flex;
     justify-content: center;
@@ -527,13 +528,17 @@ p { color: var(--text-non-selected);}
     overflow: hidden;
     padding: 10px;
     transition: width .5s cubic-bezier(0.9, 0, 0.3, 0.9)
+
 }
 
+.search:hover{
+    width: 250px;
+}
 .search input{
 
     border:none;
     outline: none;
-    width: calc(100% -64px);
+    width: calc(100% -10px);
     height: 100%;
     padding-left: 14px;
     border-radius: 4rem;
@@ -584,5 +589,5 @@ p { color: var(--text-non-selected);}
 }
 
 .show-search{
-    width: 100px;
+    width: 150px;
 }
